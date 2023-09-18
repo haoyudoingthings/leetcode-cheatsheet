@@ -1,10 +1,11 @@
 #include <vector>
+#include <utility> // std::pair
 namespace N {
-    vector<pair<int, int>> adj(int i, int j, int m, int n) {
+    std::vector<std::pair<int, int>> adj(int i, int j, int m, int n) {
         // i, j: current position
         // m, n: size of the grid
         // return vector[(x, y)]: x, y that are adjacent to i, j
-        vector<pair<int, int>> out;
+        std::vector<std::pair<int, int>> out;
         out.reserve(4);
         if (i > 0) {
             out.push_back({i-1, j});
